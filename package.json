@@ -1,0 +1,19 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Learning node.js and mongo db",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanvirch0750/Natours-node-js-project.git"
+  },
+  "author": "Tanvir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanvirch0750/Natours-node-js-project/issues"
+  },
+  "homepage": "https://github.com/tanvirch0750/Natours-node-js-project#readme"
+}
