@@ -9,7 +9,7 @@ const tours = JSON.parse(
 );
 
 // HANDLING GET REQUEST
-app.get('/api/v1/tours', (req, res) => {
+const getAllTours = (req, res) => {
   res.status(200).json({
     status: 'success',
     results: tours.length,
@@ -17,10 +17,10 @@ app.get('/api/v1/tours', (req, res) => {
       tours,
     },
   });
-});
+};
 
 //RESPONDING TO URL PARAMETERS
-app.get('/api/v1/tours/:id', (req, res) => {
+const getSingleTour = (req, res) => {
   const id = +req.params.id;
   const tour = tours.find(el => +el.id === id);
 
@@ -37,10 +37,10 @@ app.get('/api/v1/tours/:id', (req, res) => {
       tour,
     },
   });
-});
+};
 
 // HANDLING POST REQUEST
-app.post('/api/v1/tours', (req, res) => {
+const createTour = (req, res) => {
   const newId = tours[tours.length - 1].id + 1;
   const newTour = Object.assign({ id: newId }, req.body);
   tours.push(newTour);
@@ -57,10 +57,10 @@ app.post('/api/v1/tours', (req, res) => {
       });
     }
   );
-});
+};
 
 // HANDLING PATCH REQUEST
-app.patch('/api/v1/tours/:id', (req, res) => {
+const updateTour = (req, res) => {
   if (+req.params.id > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -74,10 +74,10 @@ app.patch('/api/v1/tours/:id', (req, res) => {
       tour: '<Updated tour here>',
     },
   });
-});
+};
 
 // HANDLING DELETE REQUEST
-app.delete('/api/v1/tours/:id', (req, res) => {
+const deleteTour = (req, res) => {
   if (+req.params.id > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -89,7 +89,20 @@ app.delete('/api/v1/tours/:id', (req, res) => {
     status: 'success',
     data: null,
   });
-});
+};
+
+//app.get('/api/v1/tours', getAllTours);
+//app.get('/api/v1/tours/:id', getSingleTour);
+//app.post('/api/v1/tours', createTour);
+//app.patch('/api/v1/tours/:id', updateTour);
+//app.delete('/api/v1/tours/:id', deleteTour);
+
+app.route('/api/v1/tours').get(getAllTours).post(createTour);
+app
+  .route('/api/v1/tours/:id')
+  .get(getSingleTour)
+  .patch(updateTour)
+  .delete(deleteTour);
 
 // START APP
 const port = 3000;
