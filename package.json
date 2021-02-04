@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tanvirch0750/Natours-node-js-project/issues"
   },
-  "homepage": "https://github.com/tanvirch0750/Natours-node-js-project#readme"
+  "homepage": "https://github.com/tanvirch0750/Natours-node-js-project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
