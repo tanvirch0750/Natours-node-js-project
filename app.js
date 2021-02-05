@@ -2,7 +2,18 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 
+// middleware
 app.use(express.json());
+
+// our own middleware
+app.use((req, res, next) => {
+  console.log(`Hello from the middleware`);
+  next();
+});
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
 
 const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
@@ -10,9 +21,11 @@ const tours = JSON.parse(
 
 // HANDLING GET REQUEST
 const getAllTours = (req, res) => {
+  console.log(req.requestTime);
   res.status(200).json({
     status: 'success',
     results: tours.length,
+    requestedAt: req.requestTime,
     data: {
       tours,
     },
