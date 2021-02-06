@@ -10,6 +10,7 @@ const app = express();
 // middleware
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.static(`${__dirname}/public`));
 
 // our own middleware
 app.use((req, res, next) => {
