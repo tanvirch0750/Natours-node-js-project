@@ -1,23 +1,5 @@
 [
   {
-    "name": "The Sea Explorer",
-    "duration": 7,
-    "maxGroupSize": 15,
-    "difficulty": "medium",
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 6,
-    "price": 497,
-    "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "imageCover": "tour-2-cover.jpg",
-    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
-    "startDates": [
-      "2021-06-19T09:00:00.000Z",
-      "2021-07-20T09:00:00.000Z",
-      "2021-08-18T09:00:00.000Z"
-    ]
-  },
-  {
     "name": "The Forest Hiker",
     "duration": 5,
     "maxGroupSize": 25,
@@ -89,22 +71,23 @@
       "2021-06-09T09:00:00.000Z"
     ]
   },
+
   {
-    "name": "The Sports Lover",
-    "duration": 14,
-    "maxGroupSize": 8,
-    "difficulty": "difficult",
-    "ratingsAverage": 3.9,
-    "ratingsQuantity": 7,
-    "price": 2997,
-    "summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
-    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
-    "imageCover": "tour-6-cover.jpg",
-    "images": ["tour-6-1.jpg", "tour-6-2.jpg", "tour-6-3.jpg"],
+    "name": "The Sea Explorer",
+    "duration": 7,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "price": 497,
+    "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "tour-2-cover.jpg",
+    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
     "startDates": [
-      "2021-07-19T09:00:00.000Z",
-      "2021-09-06T09:00:00.000Z",
-      "2022-03-18T10:00:00.000Z"
+      "2021-06-19T09:00:00.000Z",
+      "2021-07-20T09:00:00.000Z",
+      "2021-08-18T09:00:00.000Z"
     ]
   },
   {
@@ -143,14 +126,15 @@
       "2022-12-12T10:00:00.000Z"
     ]
   },
+
   {
-    "name": "The Wine Taster",
-    "duration": 5,
-    "maxGroupSize": 8,
+    "name": "The Sunset Beauty",
+    "duration": 3,
+    "maxGroupSize": 9,
     "difficulty": "easy",
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 7,
-    "price": 1997,
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 10,
+    "price": 1497,
     "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
     "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "imageCover": "tour-7-cover.jpg",
