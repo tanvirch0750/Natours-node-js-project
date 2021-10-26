@@ -3,6 +3,13 @@ const AppError = require('../utils/appError');
 const handleCastErrorDB = err =>
   new AppError(`Invalid ${err.path} : ${err.value}.`, 400);
 
+// eslint-disable-next-line no-unused-vars
+const handleDuplicateFiledsDB = err => {
+  const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
+  const message = `Duplicate field value: ${value} Please use another value.`;
+  return new AppError(message, 400);
+};
+
 const sendErrorDev = (err, res) => {
   res.status(err.statusCode).json({
     status: err.status,
@@ -42,10 +49,13 @@ module.exports = (err, req, res, next) => {
   }
 
   if (process.env.NODE_ENV === 'production') {
-    if (err.name === 'CastError') {
-      err = handleCastErrorDB(err);
-    }
+    let error;
+    if (err.name === 'CastError') error = handleCastErrorDB(err);
+    else if (err.code === 11000) error = handleDuplicateFiledsDB(err);
+    // else if (err.name === 'ValidationError')
+    //   error = handleValidationErrorDB(err);
+    else error = { ...err };
 
-    sendErrorProd(err, res);
+    sendErrorProd(error, res);
   }
 };
