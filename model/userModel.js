@@ -1,3 +1,4 @@
+/* eslint-disable radix */
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
@@ -22,6 +23,7 @@ const userSchema = new mongoose.Schema({
     minLength: 8,
     select: false,
   },
+  passwordChangedAt: Date,
   passwordConfirm: {
     type: String,
     required: [true, 'Please confirm your password'],
@@ -49,6 +51,20 @@ userSchema.methods.correctPassword = async function (
   userPassword
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
+};
+
+userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
+  if (this.passwordChangedAt) {
+    const changedTimestamp = parseInt(
+      this.passwordChangedAt.getTime() / 1000,
+      10
+    );
+    console.log(changedTimestamp, JWTTimestamp);
+    return JWTTimestamp < changedTimestamp;
+  }
+
+  // False means not changed
+  return false;
 };
 
 const User = mongoose.model('User', userSchema);
